@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+* {
+    font-style:initial;
+}
+
+p {
+    text-decoration:unset;
+}
+div {
+    color:rgb(130, 238, 182);
+}
+
+/* html {
+    font-size: 100% mặc định sẽ là 16px toàn cục
+} */
+

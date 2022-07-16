@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <title>The  World</title>
+        <meta charset="utf-8">
+        
+        
+        
+        <!-- Inline -->
+        <!-- <h1 style="color: red;font-size: 20px;">Hế Lô</h1>  -->
+       
+
+       
+        <!-- External -->
+        <!-- <link rel="stylesheet" href="main.css">  -->
+        
+        
+        
+        <!-- Internal -->
+        <!--
+            <style>                
+            h1 {
+                color: red;
+                font-size: 20px;
+            }
+            </style> 
+        -->
+    
+    
+    
+    </head>
+
+
+
+    <body>
+        <div>
+        
+
+
+        <a href="https://www.youtube.com" class="youtube">Youtube</a>
+        <style>
+            .youtube {
+                padding: 8px 16px;
+                color: white;
+                background-color: red;
+                text-decoration: none;
+            }
+            .youtube:hover {
+                color: black;
+                background-color: blue;
+            }
+        </style>
+
+
+
+        <p class="text-1">hừmmmmmmmmm</p>
+        <p class="text-2">hửmmmmmm</p>
+            <style>
+                html {
+                    font-size: 20px;
+                }
+                .text-1 {
+                    font-size: 1rem;
+                }
+                .text-2 {
+                    font-size: 2rem;
+                }
+            </style>
+
+        
+        
+        <div>
+            <div class="a1">
+                <div class="b1">1</div>
+            </div>
+            <div class="a2">
+                <div class="b2">2</div>
+            </div>
+            <div class="a3">
+                <div class="b3">3</div>
+            </div>
+        </div>    
+            <style>
+                .a1 {
+                    height: 200px;
+                }
+                .a1 .b1 {
+                    height: 25%;
+                    background-color: wheat;
+                }
+                .a2 {
+                    height: 500px;
+                }
+                .a2 .b2 {
+                    height: 75%;
+                    background-color: seagreen;
+                }
+            </style>
+
+
+
+        <div class="thing1">
+            <div class="boxer-1">BOX 1</div>
+        </div>
+        <div class="thing2">
+            <div class="boxer-2">BOX 2</div>
+        </div>
+            <style>
+                    /* .boxer-1 không có chiều cao, vì .parent-1 mặc định height: auto */
+                .thing1 .boxer-1 {
+                    /* height bằng đúng với chiều cao của thẻ html */
+                    /* hiện ta có thể html=20px */
+                    height: 30%; 
+                    background-color: green;
+                }
+                .thing2 {
+                    /* Hãy thử comment height lại để thấy sự thay đổi */
+                    height: 100%;
+                    background-color: #ccc;
+                }
+                    /* .boxer-2 có chiều cao, vì .parent-2 được set height */
+                .thing2 .boxer-2 {
+                    /* 30% của 400px */
+                    height: 400px;
+                    background-color: orange;
+                }
+            </style>
+
+
+
+        <div class="box-1">
+            <div class="box-2">Phúc</div>
+        </div>
+            <style>
+                .box-1 {
+                    width: 300px;
+                    height: 300px;
+                    background-color: green;
+                }
+
+                .box-1:hover {
+                    background-color:yellowgreen;
+                }
+            
+                .box-2 {
+                    width: 50%;
+                    height: 50%;
+                    color: #fff;
+                    background: rgba(0,0,0,0.5);
+                    }
+
+                .box-2:hover {
+                    background-color:violet;
+                    color:aqua; 
+                }
+            </style>
+        
+
+
+        <p class="ses">Hãy đón xem tiếp theo ở trang:<a class="good" href="https://vuighe.net">ses.com</a></p>
+            <style>
+                a.good::after {
+                    content: " ("attr(href)")";
+                }
+            </style>
+
+
+
+        <div class="bos" data-title="Điểm:"></div>
+            <style>
+                .bos {
+                    width: 100%;
+                    background-color:chartreuse;
+                    height:100%;
+                }
+                .bos::after {
+                    content: attr(data-title);
+                }
+                .bos:active {
+                    background-color:skyblue;
+                }
+            </style>
+          
+
+
+        <p class="text-1">Đoạn văn này font-size là 1rem, khi bạn thay đổi font-size cho thẻ html thì giá trị ở đây thay đổi theo.</p>
+        <p class="text-2">Đoạn văn này có font-size 2rem, vì vậy sẽ lớn gấp 2 lần đoạn văn ở trên.</p>
+            <style>
+                .text-1 {
+                    font-size: 1rem;
+                }
+                .text-2 {
+                    font-size: 2.5rem;
+                } 
+            </style>
+
+
+        
+        <h1 id="heading">Tại sao nên thêm rel="noopener" khi sử dụng target="_blank"?</h1>
+        <p class="text">
+            Như chúng ta đã biết, sử dụng target="_blank" cho thẻ a thì khi người dùng click vào liên kết trình duyệt sẽ mở trên một tab mới, thường là do liên kết trong thẻ a dẫn tới một website khác và chúng ta không muốn người dùng rời khỏi website của mình.
+        </p>
+        <h2 class="sub-heading">Vấn đề là gì?</h2>
+        <p class="text">Với cách làm trên có 2 vấn đề về bảo mật và hiệu suất:</p>
+        <ol>
+            <li>Tại trang đích có thể sử dụng window.opener để kiểm soát được cửa sổ trang gốc của chúng ta, ví dụ chạy window.opener.location.href = 'https://fullstack.edu.vn/' là có thể chuyển hướng cửa sổ gốc tới https://fullstack.edu.vn/. Hãy tưởng tượng bạn bị chuyển tới một URL có nội dung “độc hại” như 18+ (khi ngồi cạnh người yêu), hay các trang giả mạo để đánh cắp tài khoản ngân hàng, thông tin cá nhân, v.v…</li>
+            <li>Trang đích chạy cùng tiến trình xử lý Javascript với trang gốc, nếu trang đích sử dụng nhiều logic “nặng” hoặc tối ưu chưa tốt về mặt hiệu năng có thể làm ảnh hưởng tới trang web của bạn đang được mở tại cửa sổ gốc.</li>
+        </ol>
+        <h2 class="sub-heading">Khắc phục thế nào?</h2>
+        <p class="text">Để khắc phục vấn đề trên, bạn hãy thêm rel="noopener" vào toàn bộ các thẻ a có target="_blank" nhé.</p>
+        <p class="text">Tham khảo: <a href="https://web.dev/external-anchors-use-rel-noopener">https://web.dev/external-anchors-use-rel-noopener</a></p>
+            <style>
+                html {
+                    font-size: 62.5%;
+                }
+                #heading {
+                    font-size: 2rem;
+                }
+                .sub-heading {
+                    font-size: 1.6rem;
+                }
+                .text, ol li {
+                    font-size: 1.4rem;
+                }
+            </style>
+
+
+        
+            <style>
+                .box {
+                    height: 50px;
+                }
+            </style>
+        <div class="box box1">môn Hoá</div>
+            <style>
+                .box1 {
+                    width: calc(100% - 50%);
+                    background-color: red;  
+                }
+                .box.box1::after {
+                    content: " 5đ"
+                }
+            </style>
+        <div class="box box2">môn Sinh</div>
+            <style>
+                .box2 {
+                    width: calc(670px - 10px);
+                    background: rgb(60, 22, 167);
+                }
+                .box.box2::after {
+                    content: " 5.5đ"
+                }
+            </style>
+        <div class="box box3">môn Lý</div>
+            <style>
+                .box3 {
+                    width: 60%;
+                    background-color: rgba(206, 223, 15, 0.8)
+                }
+                .box.box3::after {
+                    content:  " 6.5đ"
+                }
+            </style>
+        <div class="box box4">môn Văn</div>
+            <style>
+                .box4 {
+                    width: 70%;
+                    background-color: wheat;
+                }
+                .box.box4::after {
+                    content: " 7đ"
+                }
+            </style>
+        <div class="box box5">môn Anh</div>
+            <style>
+                .box5 {
+                    width: 85%;
+                    background-color: aqua;
+                }
+                .box.box5::after {
+                    content: " 8.6đ"
+                }
+            </style>
+        <div class="box box6">môn Toán</div>
+            <style>
+                .box6 {
+                    width: 95%;
+                    background-color: cornflowerblue;
+                }
+                .box.box6::after {
+                    content: " 8.8đ"
+                }
+            </style>
+        
+
+
+        <h2 id="going">animer</h2>
+            <style>
+                :root {
+                    --go--: green;
+                }
+                #going {
+                    color: var(--go--);
+                    font-weight: 400;
+                }
+                #going:hover {
+                    color:red;
+                }
+            </style>
+
+
+
+        <h1 style="color: blue;" id="heading" class="tailing">Vương Anh Phúc</h1>
+        
+
+
+        <h1 id="heading-id" class="heading-class">IT</h1>
+            <style>
+                .heading-class#heading-id {
+                    color: violet;
+                }
+                h1#heading-id.heading-class {
+                    color:darkcyan;
+                }   
+                .heading-class {
+                    color: red;
+                }
+                #heading-id {
+                    color:yellow !important;
+                }
+                h1 {
+                    color: black;
+                }
+            </style>
+    
+
+
+        <p class="b1">Đi</p>
+        <p class="b1">Chơi</p>
+            <style>
+                .b1 {
+                    color: red;
+                }
+        </style>
+
+
+
+        <p class="b2 b3">Ngủ</p>
+        <p class="b2 b3">Nghỉ</p>
+            <style>
+                .b2.b3 {
+                    color: purple;
+                }
+            </style>
+
+
+
+        <div class="b4">
+            <p class="b5">Ăn</p>
+        </div>
+            <style>
+                .b4 .b5 {
+                    color: blue;
+                }
+            </style>
+
+
+
+        <p class="b6">Nhìn</p>
+        <div class="b6">Ngắm</div>
+            <style>
+                p.b6 {
+                    color: yellow;  
+                }
+            </style>
+
+
+
+        <p class="b7">Đoạn văn 6</p>
+        <p class="b8">Đoạn văn 7</p>
+        <h3>Tiêu đề 8</h3>
+        <h4>Tiêu đề 9</h4>
+            <style>
+                h3,h4 {
+                    color: brown;
+                }
+            </style>
+
+
+
+        <p class="children-1">Đoạn văn 1 (không parent)</p>
+        <p class="children-2">Đoạn văn 2 (không parent)</p>        
+        <div class="parent">
+            <p>Đoạn văn 1 (parent 1)</p>
+            <p class="children-1">Đoạn văn 1 (con của .parent)</p>
+            <p class="children-2">Đoạn văn 2 (con của .parent)</p>
+        </div>
+        <style>
+            /* Chọn tất cả thẻ "p" là con của thẻ có class "parent" */
+            .parent p {
+                color: green;
+            }
+            /* Chọn tất cả thẻ có class "children-1" là con của thẻ có class "parent" */
+            .parent .children-1 {
+                color: red;
+            }
+        </style>        
+
+
+
+        <ul class="game">
+            <li>Item 1</li> 
+            <li>Item 2</li> 
+            <li>Item 3
+                <ul>
+                    <li>Item 1 (con Item 3)</li>
+                    <li>Item 2 (con Item 3)</li>
+                </ul>
+            </li> 
+        </ul>
+            <style>
+                .game li {
+                    color:aqua; 
+                }
+                .game > li {
+                    color:tomato;
+                }
+            </style>
+
+
+
+        <p class="b9">Đoạn văn 10</p>
+        <p>Đoạn văn 11</p>
+        <p>Đoạn văn 12</p>
+        <p class="b10">Đoạn văn 13</p>
+        <p>Đoạn văn 14</p>
+        <p>Đoạn văn 15</p>
+        <h2 title="Hế Lô">Tui đi học Đ</h2>
+        <div>Vật cản</div>
+        <p>Đoạn văn 16</p>
+        <p>Đoạn văn 17</p>
+        <p>Đoạn văn 18</p>
+        </div>    
+            <style>
+                .b9 ~ h2 {
+                    color:teal; 
+                }
+                .b9 ~ p {
+                    color:violet;
+                }
+            </style>
+        
+        
+
+        <h1 title="hế lô" ; id="first-heading">Vương Anh Phúc</h1>
+
+
+
+        <input type="number">
+
+
+
+        <div class="boxx">
+            <div class="boxx1"></div>
+            <div class="boxx2"></div>
+            <div class="boxx3"></div>
+            <div class="boxx4"></div>
+            <div class="boxx5"></div>
+        </div>
+            <style>
+                .boxx {
+                    width: 100%;
+                    height: 120px;
+                    background-color: yellow;
+                }
+                .boxx1 {
+                    width: 1%;
+                    height: 8%;
+                    background-color: violet ;
+                }
+                .boxx2 {
+                    width: 1%;
+                    height: 8%;
+                    background-color: tomato;
+                }
+                .boxx3 {
+                    width: 1%;
+                    height: 8%;
+                    background-color: rgb(123, 71, 255);
+                }
+                .boxx4 {
+                    width: 1%;
+                    height: 8%;
+                    background-color: rgb(40, 205, 89);
+                }
+                .boxx5 {
+                    width: 1%;
+                    height: 8%;
+                    background-color: rgb(54, 40, 205);
+                }
+                .boxx:active {
+                    background-color: rgb(4, 4, 4);
+                }
+                .boxx1:hover {
+                    background-color: rgb(45, 160, 76);
+                }
+                .boxx2:hover {
+                    background-color: rgb(45, 97, 160);
+                }
+                .boxx3:hover {
+                    background-color: rgb(160, 158, 45);
+                }
+                .boxx4:hover {
+                    background-color: rgb(160, 45, 141);
+                }
+                .boxx5:hover {
+                    background-color: rgb(160, 118, 45);
+                }
+            </style>
+
+
+
+        <button>Đăng Kí</button>
+        <button>Huỷ</button>
+        
+
+
+        <p>câu chuyện kể về một chàng trai isekai xuyên không vào một thế giới thần tiên <br /> Điều mà chạm trước ánh mắt cậu ấy là một toà thành cao dọc tận trời xanh màu xám bao boc xung quanh tứ phía <br /> Khi ý thức chưa kịp tiếp nhận sự thật rằng mình là thằng <strong>Wibu</strong> thì đã có một con titan nắm lấy cậu bỏ vào cổ họng <br /> Cậu ấy sẽ thế nào ? <br /> Hãy đón xem <strong>Attack On Titan</strong></p>
+            <style>
+                p strong {
+                    color: rgb(241, 127, 26)
+                }   
+            </style>
+        
+
+
+        <img src="https://static.tuoitre.vn/tto/i/s626/2017/07/03/2-john-wick-2-1499091276.jpg" alt="ông béo già"> 
+        <br />
+        
+        
+        <a href="https://vietbaixuyenviet.com/">tới trang danh sách phim</a>
+        
+
+
+        <ul class="thing">
+            <li>phim tình cảm</li>
+            <li>phim hành động</li>
+            <li>phim ngôn tình</li>
+            <li>phim isekai</li>
+        </ul>
+        <ol>
+            <li>phim trinh thám</li>
+            <li>phim ảo tưởng</li>
+            <li>phim 16+</li>
+        </ol>
+            <style>     
+                .thing li:first-child {
+                    color: yellow;
+                }
+                .thing li:last-child {
+                    color:blue;
+                }
+            </style>
+
+
+
+        <div id="boxx"></div>
+            <style>
+                #boxx {
+                    width:100%;
+                    height: 120px;
+                    background-color: aqua;
+                }
+                #boxx::before {
+                    content: "";
+                    display: block;
+                    width: 5%;
+                    height: 50%;
+                    background-color: violet ;
+                }
+                #boxx::after {
+                    content: "";
+                    display: block;
+                    width: 5%;
+                    height: 50%;
+                    background-color: rgb(130, 238, 161);
+                }
+            </style>
+
+
+
+        <h1 class="hh1">Nhập môn cho bài html</h1>
+            <style>
+                h1.hh1::first-letter {
+                    font-size: 100px;
+                }
+            </style>
+
+
+
+        <h3 class="hh3">Nhập môn <br /> cho lập trình viên </h3>  
+            <style>
+                h3.hh3::first-line {
+                    font-size:100px;
+                    color:rgb(241, 127, 26);
+                }
+            </style>
+
+
+
+        <p class="pp1">Tui không biết ghi cái gì nhưng tui sẽ cố gắng rặn để ghi </p>
+            <style>
+                p.pp1::selection {
+                    color: red;
+                    background-color: aqua; 
+                }
+            </style>
+
+
+
+        <table class="ping">
+            <thead>
+                <th>Họ Và Tên:</th>
+                <th>Năm:</th>
+                <th>Nghề Nghiệp:</th>   
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Vương Anh Phúc</td>
+                    <td>2003</td>
+                    <td>IT</td>
+                </tr>
+                <tr>
+                    <td>Đỗ Trần Minh Mẫn</td>
+                    <td>1996</td>
+                    <td>Đa Cấp</td>
+                </tr>
+            </tbody>
+                <table>
+                    <thead>
+                        <th>Game:</th>
+                        <th>Thể Loại:</th>
+                    </thead>
+                    <tbody>
+                        <td>happy Bird</td>
+                        <td>Phiêu Liêu</td>
+                    </tbody>
+                </table>
+        </table>
+            
+       
+        
+        </div>
+    </body>
+</html>
+<!--
+    1.<h>kí tự</h>           h1-h6    heading  
+    2.<p>kí tự</p>             p      paragraph    
+    3.<img src="" alt="">     img     image
+    4.<a href="">kí tự</a>     a      anchor
+    5.<ul>                   ul,li    unordered list,list item
+        <li>kí tự</li>
+        ...
+      </ul>
+    6.<table>                         table          
+        <thead>
+            <th>kí tự</th>
+            ...
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>kí tự</td>
+                ...
+            </tr>
+        </tbody>
+      </table>
+    7.<input type="">                   input
+    8.<button>kí tự</button>            button
+    9.<div></div>                       div
+-->
+
+    <!-- Priority
+        1.Internal, External
+        *.!important - 10000
+        2.Inline - 1000
+        3.#id - 100
+        4.class - 10
+        5.tag - 1
+        6.equal specificity
+        7.universal selector and inherited - 0
+    -->
+
+    <!-- Units
+        a.Absolute Unita
+    1.px
+    2.pt
+    3.cm
+    4.mm
+    5.inch
+    6.pc
+        b.Relative Units
+    1.%
+    2.rem
+    3.em
+    4.vw
+    5.vh
+    6.vmin
+    7.vmax
+    8.ex
+    9.ch
+    -->
+    <!-- CSS function
+    1.var()
+    2.linear-gradient()
+    3.rgba()
+    4.rgb()
+    5.calc()
+    6.attr()
+    -->
+    <!-- CSS Pseudo classes
+    :root
+    :hover
+    :active
+    :first-child
+    :last-child
+    -->
+    <!-- CSS Pseudo-Elements
+        ::before
+        ::after
+        ::first-letter
+        ::first-line
+        ::selection
+     -->
